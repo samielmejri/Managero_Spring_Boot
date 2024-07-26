@@ -1,0 +1,6 @@
+tn\esprit\manajero\Services\IMethodeService.class
+tn\esprit\manajero\Controllers\MethodeController.class
+tn\esprit\manajero\ManajeroApplication.class
+tn\esprit\manajero\Repositories\MethodeRepository.class
+tn\esprit\manajero\Entities\Methode.class
+tn\esprit\manajero\Services\MethodeService.class
