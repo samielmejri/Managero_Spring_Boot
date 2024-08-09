@@ -20,6 +20,7 @@ public class QuizScheduleService {
     QuizDao quizDao;
     @Autowired
     QuizScheduleRepository quizScheduleRepository;
+    @Autowired
     private static final String STATIC_USER_ID = "etudiant";
     public static final String STATUS_SCHEDULED = "SCHEDULED";
     public static final String STATUS_COMPLETED = "COMPLETED";

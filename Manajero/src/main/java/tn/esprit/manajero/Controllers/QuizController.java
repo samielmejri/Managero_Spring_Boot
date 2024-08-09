@@ -1,11 +1,11 @@
 package tn.esprit.manajero.Controllers;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.manajero.Entities.*;
+import tn.esprit.manajero.Services.QuestionService;
 import tn.esprit.manajero.Services.QuizService;
 
 import java.util.List;
@@ -54,8 +54,6 @@ public class QuizController {
     public Integer  submitQuiz(@PathVariable String _id, @RequestParam String userId, @RequestBody List<Response> responses) {
         return   quizService.submitQuiz(userId, _id, responses).getBody();
 
-
-
     }
 
     @GetMapping("/quizzez/{_id}")
@@ -77,9 +75,27 @@ public class QuizController {
     }
 
 
+//    @PostMapping("/submission")
+//    public ResponseEntity<String> saveQuizSubmission(@RequestParam String userId, @RequestParam String quizId, @RequestParam int score) {
+//        quizService.saveQuizSubmission(userId, quizId, score);
+//        return ResponseEntity.status(HttpStatus.CREATED).body("Quiz submission saved successfully");
+//    }
+
+//        <button mat-icon-button color="warn" aria-label="Delete" (click)="deleteQuiz(quiz._id)" class="cancel-button">delete_forever</button>
+
+
+
+
+
+
+
+
+
+//    @PostMapping("/evaluate-quiz")
+//    public ResponseEntity<Integer> evaluateQuiz(@RequestBody UserAttempt userAttempt) {
+//        int score = iService.evaluateQuiz(userAttempt);
+//        return ResponseEntity.ok(score);
+//    }
+
 }
-
-
-
-
 
